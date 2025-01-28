@@ -1,3 +1,7 @@
+require_relative "primitives.rb"
+require_relative "evaluator.rb"
+require_relative "arithmetic.rb"
+
 class Serializer
   def visit_integer(node)
     node.raw_value.to_s
@@ -16,6 +20,34 @@ class Serializer
   end
 
   def visit_cell_address(node)
-    "[f#{node.row}, f#{node.col}]"
+    "[#{node.row}, #{node.col}]"
+  end
+
+  def visit_addition(node)
+    "(#{node.left_node.visit(self)} + #{node.right_node.visit(self)})"
+  end
+
+  def visit_multiplication(node)
+    "(#{node.left_node.visit(self)} * #{node.right_node.visit(self)})"
+  end
+
+  def visit_division(node)
+    "(#{node.left_node.visit(self)} / #{node.right_node.visit(self)})"
+  end
+
+  def visit_mudulo(node)
+    "(#{node.left_node.visit(self)} % #{node.right_node.visit(self)})"
+  end
+
+  def visit_exponentiation(node)
+    "(#{node.left_node.visit(self)} ^ #{node.right_node.visit(self)})"
+  end
+
+  def visit_addition(node)
+    "(#{node.left_node.visit(self)} + #{node.right_node.visit(self)})"
+  end
+
+  def visit_negation(node)
+    "-(#{node.visit(self)}"
   end
 end
