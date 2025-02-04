@@ -1,3 +1,7 @@
+require_relative "primitives.rb"
+require_relative "evaluator.rb"
+require_relative "arithmetic.rb"
+
 module Arithmetic
 
   class Addition

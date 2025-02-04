@@ -35,7 +35,7 @@ class Serializer
     "(#{node.left_node.visit(self)} / #{node.right_node.visit(self)})"
   end
 
-  def visit_mudulo(node)
+  def visit_modulo(node)
     "(#{node.left_node.visit(self)} % #{node.right_node.visit(self)})"
   end
 
