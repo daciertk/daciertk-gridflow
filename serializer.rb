@@ -48,6 +48,42 @@ class Serializer
   end
 
   def visit_negation(node)
-    "-(#{node.visit(self)}"
+    "-(#{node.visit(self)})"
   end
+
+  def visit_and(node)
+    "#{node.left_node.visit(self)} && #{node.right_node.visit(self)}"
+  end
+
+  def visit_or(node)
+    "#{node.left_node.visit(self)} || #{node.right_node.visit(self)}"
+  end
+
+  def visit_not(node)
+    "!(#{node.visit(self)})"
+  end
+
+  def visit_bitwise_and(node)
+    "#{node.left_node.visit(self)} & #{node.right_node.visit(self)}"
+  end
+
+  def visit_bitwise_or(node)
+    "#{node.left_node.visit(self)} | #{node.right_node.visit(self)}"
+  end
+
+  def visit_bitwise_xor(node)
+    "#{node.left_node.visit(self)} ^ #{node.right_node.visit(self)}"
+  end
+
+  def visit_bitwise_l_shift(node)
+    "#{node.left_node.visit(self)} << #{node.right_node.visit(self)}"
+  end
+  def visit_bitwise_r_shift(node)
+    "#{node.left_node.visit(self)} >> #{node.right_node.visit(self)}"
+  end
+
+  def visit_bitwise_not(node)
+    "~#{node.visit(self)}"
+  end
+
 end
