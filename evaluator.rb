@@ -1,8 +1,14 @@
 require_relative "primitives.rb"
 require_relative "arithmetic.rb"
-
+require_relative "runtime.rb"
 class Evaluator
 
+  attr :runtime
+
+  def initialize(runtime)
+    @runtime = runtime
+  end
+  
   def visit_integer(node)
     node
   end
