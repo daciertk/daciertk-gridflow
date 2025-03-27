@@ -1,4 +1,7 @@
 module Primitives
+  # Consider factoring out a Primitive superclass. String, number, and boolean
+  # primitives all have the same state (a single value) and constructor. Even
+  # addresses can fit this mold too if you put the column and row in an array.
   class Integer
     attr_reader :raw_value
     def initialize(raw_value)

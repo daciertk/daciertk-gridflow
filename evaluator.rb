@@ -4,6 +4,7 @@ require_relative "runtime.rb"
 
 class Evaluator
 
+  # Does this need a public getter?
   attr :runtime
 
   def initialize(runtime)
@@ -11,6 +12,9 @@ class Evaluator
   end
   
   def visit_integer(node)
+    # Yes, primitives are already primitives. Plus they're immutable, so
+    # there's no danger of the node getting modified. We might as well just
+    # return the node as is.
     node
   end
 
@@ -32,6 +36,8 @@ class Evaluator
 
   def visit_addition(node)
     #puts node
+    # This captures the pattern nicely: recursively evaluate the operands,
+    # typecheck, combine, and return a new primitive.
     left_node = node.left_node.visit(self) 
     right_node = node.right_node.visit(self)
 
@@ -131,6 +137,9 @@ class Evaluator
 
   def visit_and(node)
     left_node = node.left_node.visit(self) 
+    # The logical AND and OR operations should short-circuit. If the first
+    # operand is enough to determine the result, the second operand should not
+    # be evaluated.
     right_node = node.right_node.visit(self)
     if left_node.is_a?(Primitives::Boolean)  && right_node.is_a?(Primitives::Boolean)
       Primitives::Boolean.new(left_node.raw_value && right_node.raw_value)
@@ -219,6 +228,7 @@ class Evaluator
   def visit_equals(node)
     left_node = node.left_node.visit(self) 
     right_node = node.right_node.visit(self)
+    # Should it be illegal to compare booleans? Or strings?
     if  (left_node.is_a?(Primitives::Integer) or left_node.is_a?(Primitives::Float))  and
        (right_node.is_a?(Primitives::Integer) or right_node.is_a?(Primitives::Float))
       Primitives::Boolean.new left_node.raw_value == right_node.raw_value
@@ -305,6 +315,8 @@ class Evaluator
   def visit_cell_l_value(node)
     left_node = node.row.visit(self)
     right_node = node.col.visit(self)
+    # You hope the column and row expressions yield ints, but they might not.
+    # You've got to typecheck.
     val = Primitives::CellAddress.new(left_node.raw_value, right_node.raw_value)
     val
    
@@ -315,9 +327,11 @@ class Evaluator
     right_node = node.col
     left_node = left_node.visit(self)
     right_node = right_node.visit(self)
+    # Here you typecheck.
     if left_node.is_a?(Primitives::Integer) and right_node.is_a?(Primitives::Integer)
       address = Primitives::CellAddress.new(left_node.raw_value, right_node.raw_value)
 
+      # Yes, only rvalues trigger a lookup in the grid.
       value = runtime.get_cell(address)
       if value == nil
         raise "Undefined Cell"
