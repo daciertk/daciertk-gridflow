@@ -16,10 +16,12 @@ class Serializer
   end
 
   def visit_string(node)
+    # Calling to_s on a string is like adding 0 to a number.
     node.raw_value.to_s
   end
 
   def visit_cell_address(node)
+    # Good clean stringing. Interpolation > concatenation.
     "[#{node.row}, #{node.col}]"
   end
 

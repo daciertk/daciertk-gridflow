@@ -4,6 +4,10 @@ require_relative "arithmetic.rb"
 
 module Arithmetic
 
+  # Consider factoring out a BinaryOperator superclass. All binary operations
+  # have the same state and constructor. Same with the unary operators. Every
+  # operation is either a unary or binary operator, even casting and the stats
+  # functions. Think how much less you'd have to write!
   class Addition
     attr_reader :left_node
     attr_reader :right_node
