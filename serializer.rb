@@ -47,6 +47,10 @@ class Serializer
     "(#{node.left_node.visit(self)} + #{node.right_node.visit(self)})"
   end
 
+  def visit_subtraction(node)
+    "(#{node.left_node.visit(self)} - #{node.right_node.visit(self)})"
+  end
+
   def visit_negation(node)
     "-(#{node.visit(self)})"
   end
@@ -56,6 +60,8 @@ class Serializer
   end
 
   def visit_or(node)
+    puts "or"
+    p node
     "#{node.left_node.visit(self)} || #{node.right_node.visit(self)}"
   end
 
@@ -68,6 +74,7 @@ class Serializer
   end
 
   def visit_bitwise_or(node)
+  
     "#{node.left_node.visit(self)} | #{node.right_node.visit(self)}"
   end
 

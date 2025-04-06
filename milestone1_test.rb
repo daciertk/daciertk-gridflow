@@ -33,6 +33,8 @@ mult_node = Arithmetic::Multiplication.new(int_7, int_4)
 add_node = Arithmetic::Addition.new(mult_node, int_3)
 mod_node = Arithmetic::Modulo.new(add_node, int_12)
 value =  mod_node.visit(Evaluator.new(runtime))
+address = Primitives::CellAddress.new(0, 0)
+runtime.set_cell(address, value)
 
 puts "#{mod_node.visit(Serializer.new)} = #{value.visit(Serializer.new)}"
 puts 
@@ -44,6 +46,8 @@ cell2 = Cell::CellRValue.new(Primitives::Integer.new(2), Primitives::Integer.new
 negated_cell = Arithmetic::Negation.new(cell2)
 mult = Arithmetic::Multiplication.new(cell1, negated_cell)
 value = mult.visit(Evaluator.new(runtime))
+address = Primitives::CellAddress.new(0, 1)
+runtime.set_cell(address, value)
 puts "#{mult.visit(Serializer.new)} = #{value.visit(Serializer.new)}"
 puts 
 
@@ -116,9 +120,11 @@ puts
 
 puts "Casting"
 float = Cast::IntToFloat.new(Primitives::Integer.new(7))
-divided = Arithmetic::Division.new(float, Primitives::Float.new(2))
-value = divided.visit(Evaluator.new(runtime))
-puts "#{divided.visit(Serializer.new)} = #{value.visit(Serializer.new)}"
+int = Cast::FloatToInt.new(Primitives::Float.new(3.2))
+value = int.visit(Evaluator.new(runtime))
+puts "#{int.visit(Serializer.new)} = #{value.visit(Serializer.new)}"
+
+
 
 
 puts "Type Error Catching"

@@ -1,0 +1,100 @@
+GridFlow {
+  Level0 = Logical
+  
+  Logical =
+   NotExp "and" Logical --amdd
+  | NotExp "or" Logical --orr
+  | NotExp
+  
+  NotExp = 
+    "!" Comparison --not
+  | Comparison --other
+  
+  Comparison 
+  = BitwiseOr "<"  BitwiseOr --lessthan
+  | BitwiseOr ">"  BitwiseOr --greater
+  | BitwiseOr "<="  BitwiseOr --lessthanequals
+  | BitwiseOr ">="  BitwiseOr --greaterthanequals
+  | BitwiseOr "=="  BitwiseOr --equals
+  | BitwiseOr "!="  BitwiseOr --notequals
+  | BitwiseOr
+  
+  BitwiseOr
+  = BitwiseXor "|" BitwiseOr --or
+  | BitwiseXor
+  
+  BitwiseXor
+  = BitwiseAnd "^" BitwiseXor --bitwisexor
+  | BitwiseAnd
+  
+  BitwiseAnd
+  = BitwiseShift "&" BitwiseAnd --bitwiseand
+  | BitwiseShift
+  
+  BitwiseShift
+  = AddExp ">>" BitwiseShift --rshift
+  | BitwiseShift "<<" AddExp --lshift
+  | AddExp
+  
+    
+  AddExp
+    = AddExp "+" MulExp  -- plus
+    | AddExp "-" MulExp  -- minus
+    | MulExp
+
+  MulExp
+    = MulExp "*" ExpExp  -- times
+    | MulExp "/" ExpExp  -- divide
+    |MulExp "%" ExpExp --mod
+    | ExpExp
+
+  ExpExp
+    = PriExp "^" ExpExp  -- power
+    | PriExp
+
+  PriExp
+    = "(" Logical ")"  -- paren
+    | "-" PriExp   -- neg
+    | Number
+    
+  Int
+  = digit*
+  
+  Float
+  = digit*"."digit *
+  
+  Number  (a number)
+    = Cast
+    | GridValue
+    | Boolean
+    | INT
+    | FLOAT
+    | Cast
+    | Boolean
+  
+  Cast = 
+  "flt"  PriExp 
+  | "int" PriExp
+  
+  GridValue 
+  = CellRValue
+  | Statistical
+  | CellLValue
+  
+  Statistical
+ = Mean "("CellLValue","CellLValue")"
+ | Min"("CellLValue","CellLValue")"
+ | Max"("CellLValue","CellLValue")"
+ | Sum"("CellLValue","CellLValue")"
+
+CellLValue
+ = "["AddExp, AddExp"]"
+
+CellRValue
+= "#["AddExp, AddExp"]"
+
+Boolean
+  	= "True"
+    | "False"
+
+}
