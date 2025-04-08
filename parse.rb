@@ -1,6 +1,7 @@
 module Parser
   class Parser
     attr_reader :tokens
+    # What does attr do?
     attr        :cur
 
     def initialize(tokens)
@@ -17,6 +18,8 @@ module Parser
     end
 
     def parse 
+      # An expression should only be one thing. There shouldn't be a sequence
+      # of them at this point.
       while @cur < @tokens.length - 1
         node = exp()
       end
@@ -32,6 +35,7 @@ module Parser
       has(:equal_to) || has(:not_equals)
     end
     def exp()
+      # This is an ambigious abbreviation. Exponentiation? Expression?
       logical
     end
 
@@ -42,6 +46,9 @@ module Parser
     end
 
     def logical()
+      # This method demonstrates the recursive descent pattern for
+      # left-associative operators nicely: grab the left operand from the rung
+      # below, and loop through to collect up right operands as needed.
       left = notExp()
       while not_end and (has(:and) or has(:or))
         if has(:and)
@@ -59,6 +66,7 @@ module Parser
 
     def notExp
       if has(:not)
+        # Use recursion to allow these to chain, not an iteration.
         while not_end and has(:not)
           if has(:not)
             advance
@@ -233,11 +241,15 @@ module Parser
 
     def mulExp()
       left = expExp()
+      # Build the index check into all the has methods.
       while (@cur < @tokens.length - 1) and (has (:multiply) or has (:divide) or has (:modulo))
         if has(:multiply)
           advance
           right = expExp()
           left = Arithmetic::Multiplication.new(left, right)
+          # The recursive call should raise the exception. If you ask a parse
+          # method to parse, and it can't do it, it has the responsibility to
+          # yell.
           if left == nil or right == nil
             showError
           end
@@ -263,6 +275,12 @@ module Parser
 
     def expExp
       left = priExp()
+      # Both loops and recursion repeat code. You don't need both. The
+      # right-associativity of exponentiation means that recursion is
+      # appropriate here. You want to allow further exponents in the operand.
+      # However, because the recursion is going to repeatedly scan for nested
+      # operations, this loop will never run more than once. You could replace
+      # it with a conditional statement.
       while not_end and (has :exponent)
         if has(:exponent)
           advance
@@ -445,6 +463,7 @@ module Parser
 
     def statMean
       advance
+      # Thorough syntax checking!
       if has(:open_parenthesis)
         advance
         if has(:l_value_open)

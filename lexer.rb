@@ -34,6 +34,9 @@ module Lexer
     end
 
     def has(char)
+      # You might want to add index checks to these boolean expressions. Ruby
+      # is forgiving. If you pass an illegal index, you'll get back nil. Other
+      # languages will access garbage or throw an exception.
       char == @expression[@cur_end]
     end
 
@@ -48,6 +51,8 @@ module Lexer
     end
 
     def lex()
+      # This lexer is in good shape. It straightforwardly advances one
+      # character at a time. It emits tokens as instances of a Token class. 
 
       while has_next
         # Arithmetic Opearations
@@ -82,6 +87,7 @@ module Lexer
           while has_digit
             capture
           end
+          # Clean distinction between integer and float literals.
           if has('.')
             capture
             while has_digit
@@ -135,10 +141,14 @@ module Lexer
             capture
             emitToken(:equal_to)
           end
+          # What if there isn't a second equals sign?
         
 
         # Logical Operators
         elsif has('a')
+          # Lexing special strings with deep logic is no fun. Consider having a
+          # case that just matches any identifier. After you've gobbled up the
+          # whole identifier with very short code, check what the string is.
           capture
           if has('n')
             capture
@@ -327,6 +337,7 @@ module Lexer
           emitToken(:comma)
         
         else
+          # Yes, be loud when things go wrong.
           raise "Invalid Input - #{@expression[@cur_end]} from #{@cur_start} to #{@cur_end}"
           
         end

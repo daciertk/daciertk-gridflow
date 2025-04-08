@@ -1,15 +1,24 @@
 GridFlow {
   Level0 = Logical
   
+  # Left-associative operators have this form:
+  # level25 = level25 OPERATOR level26
+  #         | level26
+  # They recurse in their left operand and descend in their right. You've made
+  # some operators right-associative.
   Logical =
    NotExp "and" Logical --amdd
   | NotExp "or" Logical --orr
   | NotExp
   
+  # ! should have very high precedence. !x == y should be (!x) == y.
   NotExp = 
     "!" Comparison --not
   | Comparison --other
   
+  # This makes it some comparisons can't chain. But they do sometimes. Often
+  # the equality operators have lower precedence so that we can say things
+  # like a < b == b < c without parentheses.
   Comparison 
   = BitwiseOr "<"  BitwiseOr --lessthan
   | BitwiseOr ">"  BitwiseOr --greater
@@ -48,6 +57,8 @@ GridFlow {
     |MulExp "%" ExpExp --mod
     | ExpExp
 
+  # Good, this ordering of non-terminals makes exponentiation
+  # right-associative.
   ExpExp
     = PriExp "^" ExpExp  -- power
     | PriExp
