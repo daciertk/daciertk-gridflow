@@ -5,6 +5,8 @@ require_relative "arithmetic.rb"
 module Token
 
   class Token
+    # attr_reader is a variadic method, so you can pass all four symbols as
+    # parameters to one call.
     attr_reader :type 
     attr_reader :source_text
     attr_reader :start
