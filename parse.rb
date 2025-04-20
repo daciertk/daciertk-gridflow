@@ -64,6 +64,11 @@ module Parser
             advance
             node = comparison()
             return Logical::Not.new(node)
+          
+          elsif has(:bitwise_not)
+            advance
+            node = comparison
+            return Bitwise::BitwiseNot.new(node)
           end
         end
       end

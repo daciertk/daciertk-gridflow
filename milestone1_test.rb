@@ -124,8 +124,11 @@ int = Cast::FloatToInt.new(Primitives::Float.new(3.2))
 value = int.visit(Evaluator.new(runtime))
 puts "#{int.visit(Serializer.new)} = #{value.visit(Serializer.new)}"
 
-
-
+puts "Bitwise Not"
+int_7 = Primitives::Integer.new(7)
+node = Bitwise::BitwiseNot.new(int_7)
+value = node.visit(Evaluator.new(runtime))
+puts "#{int.visit(Serializer.new)} = #{value.visit(Serializer.new)}"
 
 puts "Type Error Catching"
 puts 

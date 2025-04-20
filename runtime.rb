@@ -35,6 +35,18 @@ module Runtime
       return true
     end
 
+    def set_error(address, message)
+    
+      row = address.row 
+      col = address.col 
+
+      if check_cell(row, col)
+        puts "Success"
+        @grid[row][col] = CellAddress.new(message.visit(Serializer.new), message, Primitives::String.new("ERROR"))
+      end
+    end
+
+
     def set_cell(address, tree)
     
       row = address.row 
@@ -51,7 +63,22 @@ module Runtime
       col = address.col
       if check_cell(row, col)
         value = grid[row][col].ast.visit(Evaluator.new(self))
+        if value.is_a? Primitives::String
+          value =grid[row][col].value
+        end
+      
+        #value = grid[row][col].value
       end
+      value
+    end
+
+    def get_code(address)
+      row = address.row
+      col = address.col
+      if check_cell(row, col)
+        code = grid[row][col].cell_code
+      end
+      code
     end
   end
 
@@ -69,5 +96,14 @@ module Runtime
     def set_cell(address, tree)
       @grid.set_cell(address, tree)
     end
+
+    def get_code(address)
+      @grid.get_code(address)
+    end
+
+    def set_error(address, message)
+      @grid.set_error(address, message)
+    end
+      
   end
 end

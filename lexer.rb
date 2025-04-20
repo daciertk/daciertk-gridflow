@@ -314,6 +314,7 @@ module Lexer
             if has('l')
               capture
               if has('s')
+                capture
                 if has('e')
                   capture
                   emitToken(:boolean_false)

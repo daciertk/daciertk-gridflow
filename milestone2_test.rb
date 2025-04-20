@@ -28,7 +28,7 @@ end
 
 
 tests = [
-  ["Arithmetic:", "(5 + 2) * 3 % 4"],
+  ["Arithmetic:", "3 + ~7"],
   ["Rvalue lookup and shift:", "#[0, 0] + 3"],
   ["Rvalue lookup and comparison:", "#[1 - 1, 0] < #[1 * 1, 1]"],
   ["Logic and comparison:", "(5 > 3) and not (2 > 8)"],
