@@ -8,7 +8,14 @@ require_relative "arithmetic.rb"
 require_relative "runtime.rb"
 
 module Interface 
+  # A class is a reasonable organizational structure for this code, even though
+  # you only expect to make a single instance of the interface. It provides a
+  # conventional place for initialization, isolates the globals into a narrower
+  # scope, and gives you the opportunity to break operations into methods with
+  # meaningful names. And you don't need to pass many parameters around since
+  # they're available in the receiver object.
   class Interface
+    # Do these really need public getters and setters?
     attr_accessor :active_row
     attr_accessor :active_col
     attr_accessor :rows
@@ -31,6 +38,11 @@ module Interface
       @last_row = @active_row
       @last_col = @active_col
       i = 0
+      # Each evaluation of a formula should be independent of all others, so
+      # having a single, shared runtime and visitors is a bit dangerous. They
+      # don't take up much space and they're cheap to create. I'd make
+      # temporary instances just in time, when you need to evaluate a tree.
+      # There's no need to persist them in long-lived instance variables.
       @runtime = Runtime::Runtime.new(@rows, @cols)
       @message_window = Curses::Window.new(1, width, height-1, 0)
       @debug_window = Curses::Window.new(1, width, height-2, 0)
@@ -45,6 +57,8 @@ module Interface
           int1 = Primitives::Integer.new(0)
           int2 = Primitives::Integer.new(col)
           node = Arithmetic::Addition.new(int1, int2)
+          # Yes, why do you fill the sheet with 0s? A blank cell is perfectly
+          # legitimate and not difficult to detect.
           #p address
           @runtime.set_cell(address, int1)
           i += 1
@@ -185,6 +199,9 @@ module Interface
           node = lex_n_parse(input[1..])
         rescue StandardError=> e
           address = Primitives::CellAddress.new(@active_row, @active_col)
+          # Good, making a string is reasonable. I made an error node in my AST
+          # hierarchy so that I couldn't perform a string operation on an error
+          # message.
           error = Primitives::String.new(e.message + " " + input[1..])
           @runtime.set_error(address, error)
           # @message_window.bkgd(Curses.color_pair(1) | ' '.ord)
@@ -221,6 +238,7 @@ module Interface
     def lex_n_parse(code)
       
       begin
+        # So much is happening in these few lines. Abstractions are amazing.
         lexer = Lexer::Lex.new(code)
         lexer.lex
 
