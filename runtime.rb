@@ -47,13 +47,13 @@ module Runtime
     end
 
 
-    def set_cell(address, tree)
+    def set_cell(address, tree, runtime)
     
       row = address.row 
       col = address.col 
 
       if check_cell(row, col)
-        value = tree.visit(Evaluator.new(self))
+        value = tree.visit(Evaluator.new(runtime))
         @grid[row][col] = CellAddress.new(tree.visit(Serializer.new), tree, value)
       end
     end
@@ -84,17 +84,26 @@ module Runtime
 
   class Runtime
     attr :grid
+    attr :variables
 
     def initialize(row, col)
       @grid = Grid.new(row, col)
+      @variables = Hash.new(nil)
     end 
 
+    def get_variable(var_name)
+      @variables[var_name]
+    end
+
+    def set_variable(var_name, value)
+      @variables[var_name] = value
+    end
     def get_cell(address)
       @grid.get_cell(address)
     end
 
     def set_cell(address, tree)
-      @grid.set_cell(address, tree)
+      @grid.set_cell(address, tree, self)
     end
 
     def get_code(address)
@@ -104,6 +113,9 @@ module Runtime
     def set_error(address, message)
       @grid.set_error(address, message)
     end
-      
+
+    def variables
+      @variables
+    end      
   end
 end

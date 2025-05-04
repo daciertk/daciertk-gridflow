@@ -428,4 +428,54 @@ class Evaluator
     Primitives::Integer.new(total)
   end
 
+  def visit_for_each(node)
+    top_left = node.start.visit(self)
+    bottom_right = node.end.visit(self)
+    if not (top_left.is_a?(Primitives::CellAddress) and bottom_right.is_a?(Primitives::CellAddress))
+      raise "Invalid Cell Address: top_left is a #{top_left.class} and bottom_right is a #{bottom_right.class}. Both should be instances of Primitives::CellAddress."
+    end
+    for row in top_left.row .. bottom_right.row
+      for col in top_left.col .. bottom_right.col
+        @runtime.set_variable(node.var_name, @runtime.get_cell(Primitives::CellAddress.new(row, col)))
+        val = node.block.visit(self)
+      end
+    end
+    node.last = val
+    return val
+  end
+
+  def visit_block(node)
+    statements = node.statements
+    val = 0
+    statements.each do |statement|
+      val = statement.visit(self)
+    end
+    val
+  end
+
+  def visit_assignment(node)
+    value = node.r_val.visit(self)
+    node.runtime.set_variable(node.var_name, value)
+    value
+  end
+
+  def visit_reference(node)
+    val = node.runtime.get_variable(node.var_name)
+    if val == nil
+      raise "Undefined Reference Error"
+    end
+    val
+  end
+
+  def visit_conditional(node)
+    val = node.condition.visit(self)
+    if val.raw_value == true
+      c = node.then_block.visit(self)
+    else
+      c = node.else_block.visit(self)
+    end
+    node.last = c
+    c
+
+  end
 end

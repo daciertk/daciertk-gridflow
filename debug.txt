@@ -1,0 +1,553 @@
+2025-05-04 17:52:13 -0400 - ERROR:
+#<Primitives::String:0x0000556cd45ceb08>
+Backtrace:
+/home/kdacier/Documents/cs430/cs430-daciertk/lexer.rb:431:in `lex'
+/home/kdacier/Documents/cs430/cs430-daciertk/interface.rb:225:in `lex_n_parse'
+/home/kdacier/Documents/cs430/cs430-daciertk/interface.rb:185:in `get_input'
+interfacetest.rb:41:in `block in <main>'
+interfacetest.rb:18:in `loop'
+interfacetest.rb:18:in `<main>'
+
+2025-05-04 17:52:41 -0400 - ERROR:
+#<Primitives::String:0x0000556cd43ed640>
+Backtrace:
+/home/kdacier/Documents/cs430/cs430-daciertk/evaluator.rb:439:in `block (2 levels) in visit_for_each'
+/home/kdacier/Documents/cs430/cs430-daciertk/evaluator.rb:438:in `each'
+/home/kdacier/Documents/cs430/cs430-daciertk/evaluator.rb:438:in `block in visit_for_each'
+/home/kdacier/Documents/cs430/cs430-daciertk/evaluator.rb:437:in `each'
+/home/kdacier/Documents/cs430/cs430-daciertk/evaluator.rb:437:in `visit_for_each'
+/home/kdacier/Documents/cs430/cs430-daciertk/arithmetic.rb:516:in `visit'
+/home/kdacier/Documents/cs430/cs430-daciertk/evaluator.rb:450:in `block in visit_block'
+/home/kdacier/Documents/cs430/cs430-daciertk/evaluator.rb:449:in `each'
+/home/kdacier/Documents/cs430/cs430-daciertk/evaluator.rb:449:in `visit_block'
+/home/kdacier/Documents/cs430/cs430-daciertk/arithmetic.rb:444:in `visit'
+/home/kdacier/Documents/cs430/cs430-daciertk/runtime.rb:56:in `set_cell'
+/home/kdacier/Documents/cs430/cs430-daciertk/runtime.rb:106:in `set_cell'
+/home/kdacier/Documents/cs430/cs430-daciertk/interface.rb:232:in `lex_n_parse'
+/home/kdacier/Documents/cs430/cs430-daciertk/interface.rb:196:in `get_input'
+interfacetest.rb:41:in `block in <main>'
+interfacetest.rb:18:in `loop'
+interfacetest.rb:18:in `<main>'
+
+2025-05-04 17:53:52 -0400 - ERROR:
+#<Primitives::String:0x0000556cd45b75c0>
+Backtrace:
+/home/kdacier/Documents/cs430/cs430-daciertk/evaluator.rb:439:in `block (2 levels) in visit_for_each'
+/home/kdacier/Documents/cs430/cs430-daciertk/evaluator.rb:438:in `each'
+/home/kdacier/Documents/cs430/cs430-daciertk/evaluator.rb:438:in `block in visit_for_each'
+/home/kdacier/Documents/cs430/cs430-daciertk/evaluator.rb:437:in `each'
+/home/kdacier/Documents/cs430/cs430-daciertk/evaluator.rb:437:in `visit_for_each'
+/home/kdacier/Documents/cs430/cs430-daciertk/arithmetic.rb:516:in `visit'
+/home/kdacier/Documents/cs430/cs430-daciertk/evaluator.rb:450:in `block in visit_block'
+/home/kdacier/Documents/cs430/cs430-daciertk/evaluator.rb:449:in `each'
+/home/kdacier/Documents/cs430/cs430-daciertk/evaluator.rb:449:in `visit_block'
+/home/kdacier/Documents/cs430/cs430-daciertk/arithmetic.rb:444:in `visit'
+/home/kdacier/Documents/cs430/cs430-daciertk/runtime.rb:56:in `set_cell'
+/home/kdacier/Documents/cs430/cs430-daciertk/runtime.rb:106:in `set_cell'
+/home/kdacier/Documents/cs430/cs430-daciertk/interface.rb:232:in `lex_n_parse'
+/home/kdacier/Documents/cs430/cs430-daciertk/interface.rb:185:in `get_input'
+interfacetest.rb:41:in `block in <main>'
+interfacetest.rb:18:in `loop'
+interfacetest.rb:18:in `<main>'
+
+2025-05-04 17:54:42 -0400 - ERROR:
+#<Primitives::String:0x0000556cd439aa30>
+Backtrace:
+/home/kdacier/Documents/cs430/cs430-daciertk/evaluator.rb:439:in `block (2 levels) in visit_for_each'
+/home/kdacier/Documents/cs430/cs430-daciertk/evaluator.rb:438:in `each'
+/home/kdacier/Documents/cs430/cs430-daciertk/evaluator.rb:438:in `block in visit_for_each'
+/home/kdacier/Documents/cs430/cs430-daciertk/evaluator.rb:437:in `each'
+/home/kdacier/Documents/cs430/cs430-daciertk/evaluator.rb:437:in `visit_for_each'
+/home/kdacier/Documents/cs430/cs430-daciertk/arithmetic.rb:516:in `visit'
+/home/kdacier/Documents/cs430/cs430-daciertk/evaluator.rb:450:in `block in visit_block'
+/home/kdacier/Documents/cs430/cs430-daciertk/evaluator.rb:449:in `each'
+/home/kdacier/Documents/cs430/cs430-daciertk/evaluator.rb:449:in `visit_block'
+/home/kdacier/Documents/cs430/cs430-daciertk/arithmetic.rb:444:in `visit'
+/home/kdacier/Documents/cs430/cs430-daciertk/runtime.rb:56:in `set_cell'
+/home/kdacier/Documents/cs430/cs430-daciertk/runtime.rb:106:in `set_cell'
+/home/kdacier/Documents/cs430/cs430-daciertk/interface.rb:232:in `lex_n_parse'
+/home/kdacier/Documents/cs430/cs430-daciertk/interface.rb:196:in `get_input'
+interfacetest.rb:41:in `block in <main>'
+interfacetest.rb:18:in `loop'
+interfacetest.rb:18:in `<main>'
+
+2025-05-04 17:56:26 -0400 - ERROR:
+#<Primitives::String:0x00005c3cd86cbf80>
+Backtrace:
+/home/kdacier/Documents/cs430/cs430-daciertk/evaluator.rb:439:in `block (2 levels) in visit_for_each'
+/home/kdacier/Documents/cs430/cs430-daciertk/evaluator.rb:438:in `each'
+/home/kdacier/Documents/cs430/cs430-daciertk/evaluator.rb:438:in `block in visit_for_each'
+/home/kdacier/Documents/cs430/cs430-daciertk/evaluator.rb:437:in `each'
+/home/kdacier/Documents/cs430/cs430-daciertk/evaluator.rb:437:in `visit_for_each'
+/home/kdacier/Documents/cs430/cs430-daciertk/arithmetic.rb:516:in `visit'
+/home/kdacier/Documents/cs430/cs430-daciertk/evaluator.rb:450:in `block in visit_block'
+/home/kdacier/Documents/cs430/cs430-daciertk/evaluator.rb:449:in `each'
+/home/kdacier/Documents/cs430/cs430-daciertk/evaluator.rb:449:in `visit_block'
+/home/kdacier/Documents/cs430/cs430-daciertk/arithmetic.rb:444:in `visit'
+/home/kdacier/Documents/cs430/cs430-daciertk/runtime.rb:56:in `set_cell'
+/home/kdacier/Documents/cs430/cs430-daciertk/runtime.rb:106:in `set_cell'
+/home/kdacier/Documents/cs430/cs430-daciertk/interface.rb:232:in `lex_n_parse'
+/home/kdacier/Documents/cs430/cs430-daciertk/interface.rb:185:in `get_input'
+interfacetest.rb:41:in `block in <main>'
+interfacetest.rb:18:in `loop'
+interfacetest.rb:18:in `<main>'
+
+2025-05-04 17:57:04 -0400 - ERROR:
+#<Primitives::String:0x00005fc36c36efb8>
+Backtrace:
+/home/kdacier/Documents/cs430/cs430-daciertk/evaluator.rb:439:in `block (2 levels) in visit_for_each'
+/home/kdacier/Documents/cs430/cs430-daciertk/evaluator.rb:438:in `each'
+/home/kdacier/Documents/cs430/cs430-daciertk/evaluator.rb:438:in `block in visit_for_each'
+/home/kdacier/Documents/cs430/cs430-daciertk/evaluator.rb:437:in `each'
+/home/kdacier/Documents/cs430/cs430-daciertk/evaluator.rb:437:in `visit_for_each'
+/home/kdacier/Documents/cs430/cs430-daciertk/arithmetic.rb:516:in `visit'
+/home/kdacier/Documents/cs430/cs430-daciertk/evaluator.rb:450:in `block in visit_block'
+/home/kdacier/Documents/cs430/cs430-daciertk/evaluator.rb:449:in `each'
+/home/kdacier/Documents/cs430/cs430-daciertk/evaluator.rb:449:in `visit_block'
+/home/kdacier/Documents/cs430/cs430-daciertk/arithmetic.rb:444:in `visit'
+/home/kdacier/Documents/cs430/cs430-daciertk/runtime.rb:56:in `set_cell'
+/home/kdacier/Documents/cs430/cs430-daciertk/runtime.rb:106:in `set_cell'
+/home/kdacier/Documents/cs430/cs430-daciertk/interface.rb:232:in `lex_n_parse'
+/home/kdacier/Documents/cs430/cs430-daciertk/interface.rb:196:in `get_input'
+interfacetest.rb:41:in `block in <main>'
+interfacetest.rb:18:in `loop'
+interfacetest.rb:18:in `<main>'
+
+2025-05-04 17:57:49 -0400 - ERROR:
+#<Primitives::String:0x00005fc36c48e9e8>
+Backtrace:
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:133:in `showError'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:285:in `bitwiseShift'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:265:in `bitwiseAnd'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:247:in `bitwiseXor'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:228:in `bitwiseOr'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:174:in `comparison'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:169:in `notExp'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:138:in `logical'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:126:in `exp'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:123:in `variable'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:104:in `for_each'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:71:in `conditional'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:43:in `parse_statement'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:37:in `parse'
+/home/kdacier/Documents/cs430/cs430-daciertk/interface.rb:230:in `lex_n_parse'
+/home/kdacier/Documents/cs430/cs430-daciertk/interface.rb:196:in `get_input'
+interfacetest.rb:41:in `block in <main>'
+interfacetest.rb:18:in `loop'
+interfacetest.rb:18:in `<main>'
+
+2025-05-04 17:58:03 -0400 - ERROR:
+#<Primitives::String:0x00005fc36c282d98>
+Backtrace:
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:133:in `showError'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:285:in `bitwiseShift'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:265:in `bitwiseAnd'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:247:in `bitwiseXor'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:228:in `bitwiseOr'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:174:in `comparison'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:169:in `notExp'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:138:in `logical'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:126:in `exp'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:123:in `variable'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:104:in `for_each'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:71:in `conditional'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:43:in `parse_statement'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:37:in `parse'
+/home/kdacier/Documents/cs430/cs430-daciertk/interface.rb:230:in `lex_n_parse'
+/home/kdacier/Documents/cs430/cs430-daciertk/interface.rb:196:in `get_input'
+interfacetest.rb:41:in `block in <main>'
+interfacetest.rb:18:in `loop'
+interfacetest.rb:18:in `<main>'
+
+2025-05-04 17:58:15 -0400 - ERROR:
+#<Primitives::String:0x00005fc36c33bde8>
+Backtrace:
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:18:in `has'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:66:in `conditional'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:43:in `parse_statement'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:37:in `parse'
+/home/kdacier/Documents/cs430/cs430-daciertk/interface.rb:230:in `lex_n_parse'
+/home/kdacier/Documents/cs430/cs430-daciertk/interface.rb:196:in `get_input'
+interfacetest.rb:41:in `block in <main>'
+interfacetest.rb:18:in `loop'
+interfacetest.rb:18:in `<main>'
+
+2025-05-04 17:58:44 -0400 - ERROR:
+#<Primitives::String:0x000064a0c6cd0750>
+Backtrace:
+/home/kdacier/Documents/cs430/cs430-daciertk/serializer.rb:161:in `visit_conditional'
+/home/kdacier/Documents/cs430/cs430-daciertk/arithmetic.rb:494:in `visit'
+/home/kdacier/Documents/cs430/cs430-daciertk/serializer.rb:152:in `visit_block'
+/home/kdacier/Documents/cs430/cs430-daciertk/arithmetic.rb:444:in `visit'
+/home/kdacier/Documents/cs430/cs430-daciertk/runtime.rb:57:in `set_cell'
+/home/kdacier/Documents/cs430/cs430-daciertk/runtime.rb:106:in `set_cell'
+/home/kdacier/Documents/cs430/cs430-daciertk/interface.rb:232:in `lex_n_parse'
+/home/kdacier/Documents/cs430/cs430-daciertk/interface.rb:196:in `get_input'
+interfacetest.rb:41:in `block in <main>'
+interfacetest.rb:18:in `loop'
+interfacetest.rb:18:in `<main>'
+
+2025-05-04 17:58:56 -0400 - ERROR:
+#<Primitives::String:0x000064a0c695c7e0>
+Backtrace:
+/home/kdacier/Documents/cs430/cs430-daciertk/serializer.rb:161:in `visit_conditional'
+/home/kdacier/Documents/cs430/cs430-daciertk/arithmetic.rb:494:in `visit'
+/home/kdacier/Documents/cs430/cs430-daciertk/serializer.rb:152:in `visit_block'
+/home/kdacier/Documents/cs430/cs430-daciertk/arithmetic.rb:444:in `visit'
+/home/kdacier/Documents/cs430/cs430-daciertk/runtime.rb:57:in `set_cell'
+/home/kdacier/Documents/cs430/cs430-daciertk/runtime.rb:106:in `set_cell'
+/home/kdacier/Documents/cs430/cs430-daciertk/interface.rb:232:in `lex_n_parse'
+/home/kdacier/Documents/cs430/cs430-daciertk/interface.rb:196:in `get_input'
+interfacetest.rb:41:in `block in <main>'
+interfacetest.rb:18:in `loop'
+interfacetest.rb:18:in `<main>'
+
+2025-05-04 18:00:18 -0400 - ERROR:
+#<Primitives::String:0x000055f468400558>
+Backtrace:
+/home/kdacier/Documents/cs430/cs430-daciertk/serializer.rb:161:in `visit_conditional'
+/home/kdacier/Documents/cs430/cs430-daciertk/arithmetic.rb:494:in `visit'
+/home/kdacier/Documents/cs430/cs430-daciertk/serializer.rb:152:in `visit_block'
+/home/kdacier/Documents/cs430/cs430-daciertk/arithmetic.rb:444:in `visit'
+/home/kdacier/Documents/cs430/cs430-daciertk/runtime.rb:57:in `set_cell'
+/home/kdacier/Documents/cs430/cs430-daciertk/runtime.rb:106:in `set_cell'
+/home/kdacier/Documents/cs430/cs430-daciertk/interface.rb:232:in `lex_n_parse'
+/home/kdacier/Documents/cs430/cs430-daciertk/interface.rb:185:in `get_input'
+interfacetest.rb:41:in `block in <main>'
+interfacetest.rb:18:in `loop'
+interfacetest.rb:18:in `<main>'
+
+2025-05-04 18:03:53 -0400 - ERROR:
+#<Primitives::String:0x00005592fa9aaeb0>
+Backtrace:
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:133:in `showError'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:285:in `bitwiseShift'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:265:in `bitwiseAnd'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:247:in `bitwiseXor'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:228:in `bitwiseOr'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:174:in `comparison'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:169:in `notExp'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:138:in `logical'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:126:in `exp'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:123:in `variable'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:104:in `for_each'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:71:in `conditional'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:43:in `parse_statement'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:37:in `parse'
+/home/kdacier/Documents/cs430/cs430-daciertk/interface.rb:230:in `lex_n_parse'
+/home/kdacier/Documents/cs430/cs430-daciertk/interface.rb:185:in `get_input'
+interfacetest.rb:41:in `block in <main>'
+interfacetest.rb:18:in `loop'
+interfacetest.rb:18:in `<main>'
+
+2025-05-04 18:04:40 -0400 - ERROR:
+#<Primitives::String:0x00005592faaf3010>
+Backtrace:
+/home/kdacier/Documents/cs430/cs430-daciertk/evaluator.rb:439:in `block (2 levels) in visit_for_each'
+/home/kdacier/Documents/cs430/cs430-daciertk/evaluator.rb:438:in `each'
+/home/kdacier/Documents/cs430/cs430-daciertk/evaluator.rb:438:in `block in visit_for_each'
+/home/kdacier/Documents/cs430/cs430-daciertk/evaluator.rb:437:in `each'
+/home/kdacier/Documents/cs430/cs430-daciertk/evaluator.rb:437:in `visit_for_each'
+/home/kdacier/Documents/cs430/cs430-daciertk/arithmetic.rb:518:in `visit'
+/home/kdacier/Documents/cs430/cs430-daciertk/evaluator.rb:451:in `block in visit_block'
+/home/kdacier/Documents/cs430/cs430-daciertk/evaluator.rb:450:in `each'
+/home/kdacier/Documents/cs430/cs430-daciertk/evaluator.rb:450:in `visit_block'
+/home/kdacier/Documents/cs430/cs430-daciertk/arithmetic.rb:444:in `visit'
+/home/kdacier/Documents/cs430/cs430-daciertk/runtime.rb:56:in `set_cell'
+/home/kdacier/Documents/cs430/cs430-daciertk/runtime.rb:106:in `set_cell'
+/home/kdacier/Documents/cs430/cs430-daciertk/interface.rb:232:in `lex_n_parse'
+/home/kdacier/Documents/cs430/cs430-daciertk/interface.rb:196:in `get_input'
+interfacetest.rb:41:in `block in <main>'
+interfacetest.rb:18:in `loop'
+interfacetest.rb:18:in `<main>'
+
+2025-05-04 18:09:51 -0400 - ERROR:
+#<Primitives::String:0x00005ba3d862fc50>
+Backtrace:
+/home/kdacier/Documents/cs430/cs430-daciertk/lexer.rb:431:in `lex'
+/home/kdacier/Documents/cs430/cs430-daciertk/interface.rb:225:in `lex_n_parse'
+/home/kdacier/Documents/cs430/cs430-daciertk/interface.rb:196:in `get_input'
+interfacetest.rb:41:in `block in <main>'
+interfacetest.rb:18:in `loop'
+interfacetest.rb:18:in `<main>'
+
+2025-05-04 18:13:55 -0400 - ERROR:
+#<Primitives::String:0x000058da208146a8>
+Backtrace:
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:133:in `showError'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:285:in `bitwiseShift'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:265:in `bitwiseAnd'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:247:in `bitwiseXor'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:228:in `bitwiseOr'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:174:in `comparison'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:169:in `notExp'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:138:in `logical'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:126:in `exp'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:123:in `variable'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:104:in `for_each'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:71:in `conditional'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:43:in `parse_statement'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:37:in `parse'
+/home/kdacier/Documents/cs430/cs430-daciertk/interface.rb:230:in `lex_n_parse'
+/home/kdacier/Documents/cs430/cs430-daciertk/interface.rb:196:in `get_input'
+interfacetest.rb:41:in `block in <main>'
+interfacetest.rb:18:in `loop'
+interfacetest.rb:18:in `<main>'
+
+2025-05-04 18:14:22 -0400 - ERROR:
+#<Primitives::String:0x000058da20611f68>
+Backtrace:
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:133:in `showError'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:285:in `bitwiseShift'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:265:in `bitwiseAnd'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:247:in `bitwiseXor'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:228:in `bitwiseOr'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:174:in `comparison'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:169:in `notExp'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:138:in `logical'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:126:in `exp'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:123:in `variable'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:104:in `for_each'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:71:in `conditional'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:43:in `parse_statement'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:37:in `parse'
+/home/kdacier/Documents/cs430/cs430-daciertk/interface.rb:230:in `lex_n_parse'
+/home/kdacier/Documents/cs430/cs430-daciertk/interface.rb:196:in `get_input'
+interfacetest.rb:41:in `block in <main>'
+interfacetest.rb:18:in `loop'
+interfacetest.rb:18:in `<main>'
+
+2025-05-04 18:14:59 -0400 - ERROR:
+#<Primitives::String:0x000058da206de950>
+Backtrace:
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:133:in `showError'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:285:in `bitwiseShift'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:265:in `bitwiseAnd'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:247:in `bitwiseXor'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:228:in `bitwiseOr'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:174:in `comparison'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:169:in `notExp'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:138:in `logical'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:126:in `exp'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:123:in `variable'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:104:in `for_each'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:71:in `conditional'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:43:in `parse_statement'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:37:in `parse'
+/home/kdacier/Documents/cs430/cs430-daciertk/interface.rb:230:in `lex_n_parse'
+/home/kdacier/Documents/cs430/cs430-daciertk/interface.rb:196:in `get_input'
+interfacetest.rb:41:in `block in <main>'
+interfacetest.rb:18:in `loop'
+interfacetest.rb:18:in `<main>'
+
+2025-05-04 18:17:30 -0400 - ERROR:
+#<Primitives::String:0x00005cdada562d10>
+Backtrace:
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:18:in `has'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:66:in `conditional'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:43:in `parse_statement'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:37:in `parse'
+/home/kdacier/Documents/cs430/cs430-daciertk/interface.rb:230:in `lex_n_parse'
+/home/kdacier/Documents/cs430/cs430-daciertk/interface.rb:196:in `get_input'
+interfacetest.rb:41:in `block in <main>'
+interfacetest.rb:18:in `loop'
+interfacetest.rb:18:in `<main>'
+
+2025-05-04 18:17:39 -0400 - ERROR:
+#<Primitives::String:0x00005cdada54af30>
+Backtrace:
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:133:in `showError'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:285:in `bitwiseShift'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:265:in `bitwiseAnd'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:247:in `bitwiseXor'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:228:in `bitwiseOr'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:174:in `comparison'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:169:in `notExp'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:138:in `logical'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:126:in `exp'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:123:in `variable'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:104:in `for_each'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:71:in `conditional'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:43:in `parse_statement'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:37:in `parse'
+/home/kdacier/Documents/cs430/cs430-daciertk/interface.rb:230:in `lex_n_parse'
+/home/kdacier/Documents/cs430/cs430-daciertk/interface.rb:196:in `get_input'
+interfacetest.rb:41:in `block in <main>'
+interfacetest.rb:18:in `loop'
+interfacetest.rb:18:in `<main>'
+
+2025-05-04 18:17:55 -0400 - ERROR:
+#<Primitives::String:0x00005cdada56aee8>
+Backtrace:
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:133:in `showError'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:285:in `bitwiseShift'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:265:in `bitwiseAnd'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:247:in `bitwiseXor'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:228:in `bitwiseOr'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:174:in `comparison'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:169:in `notExp'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:138:in `logical'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:126:in `exp'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:123:in `variable'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:104:in `for_each'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:71:in `conditional'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:43:in `parse_statement'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:37:in `parse'
+/home/kdacier/Documents/cs430/cs430-daciertk/interface.rb:230:in `lex_n_parse'
+/home/kdacier/Documents/cs430/cs430-daciertk/interface.rb:196:in `get_input'
+interfacetest.rb:41:in `block in <main>'
+interfacetest.rb:18:in `loop'
+interfacetest.rb:18:in `<main>'
+
+2025-05-04 18:22:55 -0400 - ERROR:
+#<Primitives::String:0x00005c1ff6647608>
+Backtrace:
+/home/kdacier/Documents/cs430/cs430-daciertk/evaluator.rb:465:in `visit_reference'
+/home/kdacier/Documents/cs430/cs430-daciertk/arithmetic.rb:476:in `visit'
+/home/kdacier/Documents/cs430/cs430-daciertk/evaluator.rb:451:in `block in visit_block'
+/home/kdacier/Documents/cs430/cs430-daciertk/evaluator.rb:450:in `each'
+/home/kdacier/Documents/cs430/cs430-daciertk/evaluator.rb:450:in `visit_block'
+/home/kdacier/Documents/cs430/cs430-daciertk/arithmetic.rb:444:in `visit'
+/home/kdacier/Documents/cs430/cs430-daciertk/runtime.rb:56:in `set_cell'
+/home/kdacier/Documents/cs430/cs430-daciertk/runtime.rb:106:in `set_cell'
+/home/kdacier/Documents/cs430/cs430-daciertk/interface.rb:232:in `lex_n_parse'
+/home/kdacier/Documents/cs430/cs430-daciertk/interface.rb:196:in `get_input'
+interfacetest.rb:41:in `block in <main>'
+interfacetest.rb:18:in `loop'
+interfacetest.rb:18:in `<main>'
+
+2025-05-04 18:23:29 -0400 - ERROR:
+#<Primitives::String:0x0000604f04fbf820>
+Backtrace:
+/home/kdacier/Documents/cs430/cs430-daciertk/evaluator.rb:465:in `visit_reference'
+/home/kdacier/Documents/cs430/cs430-daciertk/arithmetic.rb:476:in `visit'
+/home/kdacier/Documents/cs430/cs430-daciertk/evaluator.rb:451:in `block in visit_block'
+/home/kdacier/Documents/cs430/cs430-daciertk/evaluator.rb:450:in `each'
+/home/kdacier/Documents/cs430/cs430-daciertk/evaluator.rb:450:in `visit_block'
+/home/kdacier/Documents/cs430/cs430-daciertk/arithmetic.rb:444:in `visit'
+/home/kdacier/Documents/cs430/cs430-daciertk/runtime.rb:56:in `set_cell'
+/home/kdacier/Documents/cs430/cs430-daciertk/runtime.rb:106:in `set_cell'
+/home/kdacier/Documents/cs430/cs430-daciertk/interface.rb:232:in `lex_n_parse'
+/home/kdacier/Documents/cs430/cs430-daciertk/interface.rb:196:in `get_input'
+interfacetest.rb:41:in `block in <main>'
+interfacetest.rb:18:in `loop'
+interfacetest.rb:18:in `<main>'
+
+2025-05-04 18:23:32 -0400 - ERROR:
+#<Primitives::String:0x0000604f04f95840>
+Backtrace:
+/home/kdacier/Documents/cs430/cs430-daciertk/evaluator.rb:465:in `visit_reference'
+/home/kdacier/Documents/cs430/cs430-daciertk/arithmetic.rb:476:in `visit'
+/home/kdacier/Documents/cs430/cs430-daciertk/evaluator.rb:451:in `block in visit_block'
+/home/kdacier/Documents/cs430/cs430-daciertk/evaluator.rb:450:in `each'
+/home/kdacier/Documents/cs430/cs430-daciertk/evaluator.rb:450:in `visit_block'
+/home/kdacier/Documents/cs430/cs430-daciertk/arithmetic.rb:444:in `visit'
+/home/kdacier/Documents/cs430/cs430-daciertk/runtime.rb:56:in `set_cell'
+/home/kdacier/Documents/cs430/cs430-daciertk/runtime.rb:106:in `set_cell'
+/home/kdacier/Documents/cs430/cs430-daciertk/interface.rb:232:in `lex_n_parse'
+/home/kdacier/Documents/cs430/cs430-daciertk/interface.rb:185:in `get_input'
+interfacetest.rb:41:in `block in <main>'
+interfacetest.rb:18:in `loop'
+interfacetest.rb:18:in `<main>'
+
+2025-05-04 18:23:57 -0400 - ERROR:
+#<Primitives::String:0x000057d673dad580>
+Backtrace:
+/home/kdacier/Documents/cs430/cs430-daciertk/evaluator.rb:465:in `visit_reference'
+/home/kdacier/Documents/cs430/cs430-daciertk/arithmetic.rb:476:in `visit'
+/home/kdacier/Documents/cs430/cs430-daciertk/evaluator.rb:451:in `block in visit_block'
+/home/kdacier/Documents/cs430/cs430-daciertk/evaluator.rb:450:in `each'
+/home/kdacier/Documents/cs430/cs430-daciertk/evaluator.rb:450:in `visit_block'
+/home/kdacier/Documents/cs430/cs430-daciertk/arithmetic.rb:444:in `visit'
+/home/kdacier/Documents/cs430/cs430-daciertk/runtime.rb:56:in `set_cell'
+/home/kdacier/Documents/cs430/cs430-daciertk/runtime.rb:106:in `set_cell'
+/home/kdacier/Documents/cs430/cs430-daciertk/interface.rb:232:in `lex_n_parse'
+/home/kdacier/Documents/cs430/cs430-daciertk/interface.rb:196:in `get_input'
+interfacetest.rb:41:in `block in <main>'
+interfacetest.rb:18:in `loop'
+interfacetest.rb:18:in `<main>'
+
+2025-05-04 18:25:01 -0400 - ERROR:
+#<Primitives::String:0x00005659a3005ef8>
+Backtrace:
+/home/kdacier/Documents/cs430/cs430-daciertk/evaluator.rb:465:in `visit_reference'
+/home/kdacier/Documents/cs430/cs430-daciertk/arithmetic.rb:476:in `visit'
+/home/kdacier/Documents/cs430/cs430-daciertk/evaluator.rb:451:in `block in visit_block'
+/home/kdacier/Documents/cs430/cs430-daciertk/evaluator.rb:450:in `each'
+/home/kdacier/Documents/cs430/cs430-daciertk/evaluator.rb:450:in `visit_block'
+/home/kdacier/Documents/cs430/cs430-daciertk/arithmetic.rb:444:in `visit'
+/home/kdacier/Documents/cs430/cs430-daciertk/runtime.rb:56:in `set_cell'
+/home/kdacier/Documents/cs430/cs430-daciertk/runtime.rb:106:in `set_cell'
+/home/kdacier/Documents/cs430/cs430-daciertk/interface.rb:232:in `lex_n_parse'
+/home/kdacier/Documents/cs430/cs430-daciertk/interface.rb:196:in `get_input'
+interfacetest.rb:41:in `block in <main>'
+interfacetest.rb:18:in `loop'
+interfacetest.rb:18:in `<main>'
+
+2025-05-04 18:25:40 -0400 - ERROR:
+#<Primitives::String:0x00005659a31aa628>
+Backtrace:
+/home/kdacier/Documents/cs430/cs430-daciertk/lexer.rb:431:in `lex'
+/home/kdacier/Documents/cs430/cs430-daciertk/interface.rb:225:in `lex_n_parse'
+/home/kdacier/Documents/cs430/cs430-daciertk/interface.rb:196:in `get_input'
+interfacetest.rb:41:in `block in <main>'
+interfacetest.rb:18:in `loop'
+interfacetest.rb:18:in `<main>'
+
+2025-05-04 18:27:06 -0400 - ERROR:
+#<Primitives::String:0x00006410de5d16e8>
+Backtrace:
+/home/kdacier/Documents/cs430/cs430-daciertk/evaluator.rb:465:in `visit_reference'
+/home/kdacier/Documents/cs430/cs430-daciertk/arithmetic.rb:476:in `visit'
+/home/kdacier/Documents/cs430/cs430-daciertk/evaluator.rb:451:in `block in visit_block'
+/home/kdacier/Documents/cs430/cs430-daciertk/evaluator.rb:450:in `each'
+/home/kdacier/Documents/cs430/cs430-daciertk/evaluator.rb:450:in `visit_block'
+/home/kdacier/Documents/cs430/cs430-daciertk/arithmetic.rb:444:in `visit'
+/home/kdacier/Documents/cs430/cs430-daciertk/runtime.rb:56:in `set_cell'
+/home/kdacier/Documents/cs430/cs430-daciertk/runtime.rb:106:in `set_cell'
+/home/kdacier/Documents/cs430/cs430-daciertk/interface.rb:232:in `lex_n_parse'
+/home/kdacier/Documents/cs430/cs430-daciertk/interface.rb:196:in `get_input'
+interfacetest.rb:41:in `block in <main>'
+interfacetest.rb:18:in `loop'
+interfacetest.rb:18:in `<main>'
+
+2025-05-04 18:27:32 -0400 - ERROR:
+#<Primitives::String:0x000058e56567e848>
+Backtrace:
+/home/kdacier/Documents/cs430/cs430-daciertk/evaluator.rb:465:in `visit_reference'
+/home/kdacier/Documents/cs430/cs430-daciertk/arithmetic.rb:476:in `visit'
+/home/kdacier/Documents/cs430/cs430-daciertk/evaluator.rb:451:in `block in visit_block'
+/home/kdacier/Documents/cs430/cs430-daciertk/evaluator.rb:450:in `each'
+/home/kdacier/Documents/cs430/cs430-daciertk/evaluator.rb:450:in `visit_block'
+/home/kdacier/Documents/cs430/cs430-daciertk/arithmetic.rb:444:in `visit'
+/home/kdacier/Documents/cs430/cs430-daciertk/runtime.rb:56:in `set_cell'
+/home/kdacier/Documents/cs430/cs430-daciertk/runtime.rb:106:in `set_cell'
+/home/kdacier/Documents/cs430/cs430-daciertk/interface.rb:232:in `lex_n_parse'
+/home/kdacier/Documents/cs430/cs430-daciertk/interface.rb:196:in `get_input'
+interfacetest.rb:41:in `block in <main>'
+interfacetest.rb:18:in `loop'
+interfacetest.rb:18:in `<main>'
+
+2025-05-04 18:29:09 -0400 - ERROR:
+#<Primitives::String:0x000058e5655a0458>
+Backtrace:
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:133:in `showError'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:285:in `bitwiseShift'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:265:in `bitwiseAnd'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:247:in `bitwiseXor'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:228:in `bitwiseOr'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:174:in `comparison'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:169:in `notExp'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:138:in `logical'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:126:in `exp'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:123:in `variable'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:104:in `for_each'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:71:in `conditional'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:43:in `parse_statement'
+/home/kdacier/Documents/cs430/cs430-daciertk/parse.rb:37:in `parse'
+/home/kdacier/Documents/cs430/cs430-daciertk/interface.rb:230:in `lex_n_parse'
+/home/kdacier/Documents/cs430/cs430-daciertk/interface.rb:196:in `get_input'
+interfacetest.rb:41:in `block in <main>'
+interfacetest.rb:18:in `loop'
+interfacetest.rb:18:in `<main>'
+

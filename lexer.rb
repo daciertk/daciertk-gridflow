@@ -28,8 +28,9 @@ module Lexer
     end
 
     def capture()
-
+      
       @cur_text = @cur_text + @expression[@cur_end]
+      
       @cur_end = @cur_end  + 1
     end
 
@@ -37,10 +38,20 @@ module Lexer
       char == @expression[@cur_end]
     end
 
+    def has_in
+      expression[@cur_end..@cur_end + 1] == "in"
+    end
+
     def has_digit()
       char = expression[@cur_end]
       (char =~ /\d/) == 0
     end
+
+    def has_text()
+      char = expression[@cur_end]
+      (char =~ /[a-z]/) == 0
+    end
+
 
     def has_next()
       @cur_end < (@expression.length)
@@ -51,7 +62,11 @@ module Lexer
 
       while has_next
         # Arithmetic Opearations
-        if has('+')
+        if has_in
+          capture
+          capture
+          emitToken(:in)
+        elsif has('+')
           capture
           emitToken(:plus)
         
@@ -134,6 +149,8 @@ module Lexer
           if has('=')
             capture
             emitToken(:equal_to)
+          else
+            emitToken(:assignment)
           end
         
 
@@ -228,6 +245,13 @@ module Lexer
               capture
               emitToken(:int_to_float)
             end
+          elsif has('o')
+            capture
+            if has('r')
+              capture
+              emitToken(:for)
+            end
+      
           end
         
         elsif has('i')
@@ -238,6 +262,12 @@ module Lexer
               capture
               emitToken(:float_to_int)
             end
+          elsif has('f')
+            capture
+            emitToken(:if)
+          else
+            capture
+            emitToken(:in)
           end
         
 
@@ -326,7 +356,77 @@ module Lexer
         elsif has(',')
           capture
           emitToken(:comma)
+        elsif has('=')
+          capture
+          emitToken(:assignment)
+
+        elsif has(':')
+          capture
+          while has_text and not has_in
+            capture
+          end
+          
+          emitToken(:variable)
         
+        elsif has('e')
+          capture
+          if has('l')
+            capture
+            if has('s')
+              capture
+              if has('e')
+                capture
+                emitToken(:else)
+              end
+            end
+
+          elsif has('n')
+            capture
+            if has('d')
+              capture
+              emitToken(:end)
+            end
+          end
+        elsif has('t')
+          capture
+          if has('h')
+            capture
+            if has('e')
+              capture
+              if has('n')
+                capture
+                emitToken(:then)
+              end
+            end
+          end
+        
+        elsif has('f')
+          capture
+          if has('o')
+            capture
+            if has('r')
+              capture
+              emitToken(:for)
+            end
+          end
+        
+        elsif has('i')
+          capture
+          if has('n')
+            capture
+            emitToken(:in)
+          end
+        
+        elsif has('.')
+          capture
+          if has('.')
+            capture
+            emitToken(:rangeID)
+          end
+
+        elsif has(';')
+          capture
+          emitToken(:end_block)
         else
           raise "Invalid Input - #{@expression[@cur_end]} from #{@cur_start} to #{@cur_end}"
           

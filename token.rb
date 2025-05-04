@@ -6,7 +6,7 @@ module Token
 
   class Token
     attr_reader :type 
-    attr_reader :source_text
+    attr_accessor :source_text
     attr_reader :start
     attr_reader :end
 
@@ -15,6 +15,10 @@ module Token
       @source_text = source_text
       @start = start
       @end = end_index
+    end
+
+    def source_text
+      @source_text
     end
   end
 end

@@ -219,13 +219,13 @@ module Interface
       #@grid_window.getch
     end
     def lex_n_parse(code)
-      
+
       begin
         lexer = Lexer::Lex.new(code)
         lexer.lex
 
         tokens = lexer.tokens
-        parser = Parser::Parser.new(tokens)
+        parser = Parser::Parser.new(tokens, @runtime)
         
         ast = parser.parse
         address = Primitives::CellAddress.new(@active_row, @active_col)
@@ -235,7 +235,13 @@ module Interface
        # @runtime.set_cell(address, Primitives::String.new(e.message))
         
         error = Primitives::String.new(e.message + " in expression { " + code + "}")
-        p error
+        backtrace = e.backtrace.join("\n")
+        full_message = "#{Time.now} - ERROR:\n#{error}\nBacktrace:\n#{backtrace}\n\n"
+      
+        # Write to debug.log file
+        File.open("debug.txt", "a") do |file|
+          file.write(full_message)
+        end
         @runtime.set_error(address, error)
         
         return

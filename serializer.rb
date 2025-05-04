@@ -147,4 +147,28 @@ class Serializer
   def visit_cell_l_value(node)
     "[#{node.row.visit(self)}, #{node.col.visit(self)}]"
   end
+
+  def visit_block(node)
+    node.statements[-1].visit(self)
+  end
+
+  def visit_reference(node)
+    val = node.runtime.get_variable(node.var_name)
+    val.visit(self)
+  end
+
+  def visit_conditional(node)
+    "#{node.last.visit(self)}"  end
+
+  def visit_assignment(node)
+    "#{node.var_name} = #{node.r_val.visit(self)}"
+  end
+
+  def visit_for_each(node)
+    "#{node.last.visit(self)}"
+  end
+
+  def visit_reference(node)
+    node.runtime.get_variable(node.var_name).visit(self)
+  end
 end

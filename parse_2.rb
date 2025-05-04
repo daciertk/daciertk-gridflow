@@ -1,8 +1,9 @@
 require_relative "token.rb"
-module Parser
+module Parser2
   class Parser
     attr_reader :tokens
     attr        :cur
+    attr        :statements
     attr        :runtime
 
     def initialize(tokens, runtime)
@@ -53,15 +54,18 @@ module Parser
       if not_end and has(:if)
         advance
         cond = logical
-      
+        p "cond"
+        p cond
         if not_end and has(:then)
+          puts "then"
           advance
-          then_statement = exp
+          then_statement = exp;
         end
         else_statement = Primitives::Integer.new(0)
         if not_end and has(:else)
           advance
           else_statement = exp
+          p else_statement
         end
         if has(:end)
           advance
@@ -86,6 +90,7 @@ module Parser
               
           
               block = parse
+              p block
               if has(:end)
                 advance
               
@@ -114,6 +119,7 @@ module Parser
         if not_end and has(:assignment)
           advance
           value = exp()
+          p var_name
           return Variable::Assignment.new(var_name, value, runtime)
         else
           return Variable::Reference.new(var_name, runtime)
@@ -436,6 +442,7 @@ module Parser
       elsif has(:int_to_float)
         castInt
       elsif has(:variable)
+        p"VAR"
         variable
       else
         showError

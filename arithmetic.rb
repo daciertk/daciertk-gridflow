@@ -431,6 +431,99 @@ end
     end
   end
  
+module Block
+
+    class Block
+      attr_reader :statements
+
+      def initialize(statements)
+        @statements = statements
+      end
+
+      def visit(visitor)
+        visitor.visit_block(self)
+      end
+    end
+end
+
+module Variable
+  class Assignment
+    attr_reader :var_name
+    attr_reader :r_val 
+    attr_reader :runtime
+
+    def initialize(var_name, r_val, runtime)
+      @var_name = var_name
+      @r_val = r_val
+      @runtime = runtime
+    end
+    
+    def visit(visitor)
+      visitor.visit_assignment(self)
+    end
+  end
+
+  class Reference 
+    attr_reader :var_name
+    attr_reader :runtime
+
+    def initialize(var_name, runtime)
+      @var_name = var_name
+      @runtime = runtime
+    end
+
+    def visit(visitor)
+      visitor.visit_reference(self)
+    end
+  end
+end
+
+module Conditional
+  class Conditional
+    attr_reader :condition 
+    attr_reader :then_block
+    attr_reader :else_block
+    attr_accessor :last
+
+    def initialize(condition, then_block, else_block)
+      @condition = condition
+      @then_block = then_block
+      @else_block = else_block
+    end
+
+    def visit(visitor)
+      visitor.visit_conditional(self)
+    end
+    
+
+  end
+end
+
+module For 
+  class ForEach
+    attr_reader :var_name 
+    attr_reader :start 
+    attr_reader :end
+    attr_reader :block 
+    attr_accessor :last
+
+    def initialize(var_name, start, end_cell, block)
+      @var_name = var_name
+      @start = start
+      @end = end_cell
+      @block = block 
+    end
+
+    def visit(visitor)
+      visitor.visit_for_each(self)
+    end
+  end
+end
+
+
+
+
+
 
 
 

@@ -8,7 +8,7 @@ require_relative "runtime.rb"
 require_relative "interface.rb"
 require 'curses'
 puts "test"
-grid = Interface::Interface.new(7, 7)
+grid = Interface::Interface.new(10, 10)
 
 grid.render
 
