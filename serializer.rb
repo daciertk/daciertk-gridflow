@@ -149,6 +149,8 @@ class Serializer
   end
 
   def visit_block(node)
+    # What? Why are you only visiting the final statement? You have to
+    # serialize all the statements.
     node.statements[-1].visit(self)
   end
 

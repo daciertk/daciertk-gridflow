@@ -431,8 +431,12 @@ end
     end
   end
  
+# Do you really need a new module for each class?
 module Block
 
+    # Building a language is hard, but I'm amazed at how much simpler it is to
+    # extend one: just add some keywords or operators to the lexer, some new
+    # parsing methods, and some model classes.
     class Block
       attr_reader :statements
 

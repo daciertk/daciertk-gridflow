@@ -38,6 +38,8 @@ module Lexer
       char == @expression[@cur_end]
     end
 
+    # Use a case to lex any identifier and check that identifier to see if it's
+    # actually a keyword.
     def has_in
       expression[@cur_end..@cur_end + 1] == "in"
     end

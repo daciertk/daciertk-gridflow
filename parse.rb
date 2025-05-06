@@ -34,10 +34,12 @@ module Parser
     end
 
     def parse
+      # Why not let the method make the block?
       Block::Block.new(parse_statement)
     end
   
     def parse_statement
+      # This parses more than a statement. Why not call it block?
       values = []
       while (not_end and not has(:end_block) and not has(:end))
         val = conditional
@@ -49,6 +51,12 @@ module Parser
       values
     end
 
+    # Our language doesn't really have pure statements. Everything produces a
+    # value. You could put loops and conditionals in levelN so that you can
+    # embed them in other expressions. All items in that level are
+    # non-associative: they don't appear next to each other. Assignments can be
+    # expressions too. When they produce a value, you chain them. For example,
+    # "a = b = 7". They are generally the lowest precedence.
     def conditional 
       if not_end and has(:if)
         advance
