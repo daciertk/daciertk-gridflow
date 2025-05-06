@@ -431,6 +431,7 @@ class Evaluator
   def visit_for_each(node)
     top_left = node.start.visit(self)
     bottom_right = node.end.visit(self)
+    # Good, we can't trust users to enter expressions of the correct type.
     if not (top_left.is_a?(Primitives::CellAddress) and bottom_right.is_a?(Primitives::CellAddress))
       raise "Invalid Cell Address: top_left is a #{top_left.class} and bottom_right is a #{bottom_right.class}. Both should be instances of Primitives::CellAddress."
     end
@@ -440,13 +441,17 @@ class Evaluator
         val = node.block.visit(self)
       end
     end
+    # Why are you modifying the node? That's like editing the machine code when
+    # running a program.
     node.last = val
     return val
   end
 
   def visit_block(node)
+    # This local variable doesn't gain you much.
     statements = node.statements
     val = 0
+    # I love how much block does and how little it knows. Thanks, polymorphism!
     statements.each do |statement|
       val = statement.visit(self)
     end
@@ -455,6 +460,8 @@ class Evaluator
 
   def visit_assignment(node)
     value = node.r_val.visit(self)
+    # Yes, we eagerly evaluate the right-hand side and only store the final
+    # primitive.
     node.runtime.set_variable(node.var_name, value)
     value
   end
@@ -469,6 +476,10 @@ class Evaluator
 
   def visit_conditional(node)
     val = node.condition.visit(self)
+    # Better typecheck the condition value to make sure it's a boolean
+    # primitive.
+    # Yes, we lazily evaluate the blocks of a conditional on an as-needed
+    # basis. Not eagerly.
     if val.raw_value == true
       c = node.then_block.visit(self)
     else

@@ -88,6 +88,7 @@ module Runtime
 
     def initialize(row, col)
       @grid = Grid.new(row, col)
+      # A hash is a fine choice. Plain {} would work to initialize it.
       @variables = Hash.new(nil)
     end 
 
@@ -114,6 +115,8 @@ module Runtime
       @grid.set_error(address, message)
     end
 
+    # You already have a getter from attr_reader. But do you even need the whole
+    # hash to be public?
     def variables
       @variables
     end      
