@@ -3,4 +3,4 @@ GridFlow is a terminal spreadsheet program and programming language. GridFlow wa
 and statistical functions mean, median, max and min over a set of cells. A writeup and demonstration of GridFlow is available [here on my personal website]([daciertk.github.io/projects/gridflow.html](https://daciertk.github.io/projects/gridflow.html))
 
 ## Running GridFlow
-Running GridFlow requires Ruby and the [Curses gem](https://rubygems.org/gems/curses/versions/1.2.4) to be installed. From the project folder run ** ruby interfacemain.rb
+Running GridFlow requires Ruby and the [Curses gem](https://rubygems.org/gems/curses/versions/1.2.4) to be installed. From the project folder run **ruby interfacemain.rb
